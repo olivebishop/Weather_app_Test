@@ -2,7 +2,7 @@
 
 A modern weather application built with Next.js and Laravel, featuring real-time weather data, forecasts, and geolocation.
 
-![Weather App Screenshot](/weather.png?height=400&width=800)
+![Weather App Screenshot](/weather.png)
 
 ## Features
 
@@ -25,6 +25,7 @@ A modern weather application built with Next.js and Laravel, featuring real-time
 - RippleUI components
 - Husky for Git hooks
 - Commitlint for enforcing conventional commit messages
+- Framer Motion for animations
 
 ### Backend
 - Laravel 10+
@@ -32,7 +33,6 @@ A modern weather application built with Next.js and Laravel, featuring real-time
 
 ### APIs
 - OpenWeatherMap API for weather data
-- OpenWeatherMap Geocoding API for location services
 
 ## Prerequisites
 
@@ -52,7 +52,38 @@ git clone https://github.com/olivebishop/Weather_app_Test
 cd weather-app
 ```
 
-### 2. Commit Message Convention
+### 2. Install Frontend Dependencies
+
+Using pnpm:
+
+```bash
+pnpm install
+```
+
+To add Framer Motion to the project:
+
+```bash
+pnpm add framer-motion
+```
+
+### 3. Configure Environment Variables
+
+Create a `.env.local` file in the root directory with the following variables:
+
+```
+NEXT_PUBLIC_OPENWEATHER_API_KEY=your_openweather_api_key
+NEXT_PUBLIC_API_URL=your_backend_api_url
+```
+
+### 4. Start the Development Server
+
+```bash
+pnpm dev
+```
+
+The application will be available at http://localhost:3000
+
+### 5. Commit Message Convention
 
 This project uses Husky and commitlint to enforce conventional commit messages. All commit messages must follow this format:
 
@@ -71,11 +102,3 @@ Examples of valid commit messages:
 - `docs: update installation instructions`
 - `style: improve header responsiveness`
 
-### 3. Development Workflow
-
-When contributing to this project, make sure to:
-
-1. Install Husky hooks after cloning the repository by running `pnpm install` (the prepare script will set up Husky automatically)
-2. Follow the conventional commit format for all your commits
-3. Pull the latest changes before starting new work
-4. Create feature branches for new features or bug fixes
