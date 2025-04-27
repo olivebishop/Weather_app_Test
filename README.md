@@ -18,11 +18,11 @@ A modern weather application built with Next.js and Laravel, featuring real-time
 ## Technologies Used
 
 ### Frontend
-- Next.js 14+
+- Next.js 15.3.1
 - TypeScript
 - Tailwind CSS
 - Lucide React icons
-- ShadCN UI components
+- RippleUI components
 - Husky for Git hooks
 - Commitlint for enforcing conventional commit messages
 
