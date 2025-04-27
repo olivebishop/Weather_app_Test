@@ -40,7 +40,7 @@ interface ForecastResponse {
 }
 
 interface CacheItem {
-  data: any;
+  data: unknown;
   timestamp: number;
 }
 
@@ -48,7 +48,7 @@ interface CacheItem {
 const cache: Record<string, CacheItem> = {};
 const CACHE_DURATION = 30 * 60 * 1000; 
 
-function getCachedData(key: string): any | null {
+function getCachedData(key: string): unknown | null {
   const item = cache[key];
   if (!item) return null;
   
@@ -63,7 +63,7 @@ function getCachedData(key: string): any | null {
   return item.data;
 }
 
-function setCachedData(key: string, data: any): void {
+function setCachedData(key: string, data: unknown): void {
   cache[key] = {
     data,
     timestamp: Date.now()
@@ -129,7 +129,7 @@ export async function GET(request: Request) {
           console.log(`❌ Laravel backend returned error: ${response.status}`)
         }
       } catch (error) {
-        if (error.name === 'AbortError') {
+        if (typeof error === "object" && error !== null && "name" in error && (error as { name?: unknown }).name === 'AbortError') {
           console.error("❌ Laravel request timed out after 1 second")
         } else {
           console.error("❌ Error proxying to Laravel backend:", error)
