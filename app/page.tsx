@@ -5,8 +5,6 @@ import { useState, useEffect } from "react"
 import { Search, Wind, Droplets,  Loader2, Thermometer, Eye, Gauge } from "lucide-react"
 import { Toaster, toast } from 'sonner'
 import { motion, AnimatePresence } from "framer-motion"
-
-// Assuming these components exist in your project
 import WeatherIcon from "@/components/weather-icon"
 
 interface DailyForecast {
