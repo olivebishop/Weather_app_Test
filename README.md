@@ -2,7 +2,7 @@
 
 A modern weather application built with Next.js and Laravel, featuring real-time weather data, forecasts, and geolocation.
 
-![Weather App Screenshot](https://github.com/olivebishop/Weather_app_Test/blob/main/weather.png?raw=true)
+![Weather App Screenshot](./weather.png)
 
 ## Features
 
