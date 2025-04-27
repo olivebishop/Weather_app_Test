@@ -2,8 +2,6 @@
 
 A modern weather application built with Next.js and Laravel, featuring real-time weather data, forecasts, and geolocation.
 
-![Weather App Screenshot](./weather.png)
-
 ## Features
 
 - Current weather conditions display
