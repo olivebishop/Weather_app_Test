@@ -8,7 +8,6 @@ A modern weather application built with Next.js and Laravel, featuring real-time
 - 3-day weather forecast
 - Temperature unit conversion (Celsius/Fahrenheit)
 - City search functionality
-- Automatic location detection using browser geolocation
 - Wind speed and humidity information
 - Responsive design for all devices
 - Fallback mechanisms for API failures
